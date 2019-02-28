@@ -6,20 +6,25 @@
  */
 public class DatabaseItem
 {
-    private String listItem;
-
-    public void addItem()
+    private String[] listItem;
+    private Item item;
+    
+    public boolean addItem(Item item)
     {
-
+        return true;
     }
 
-    public void removeItem()
+    public boolean removeItem(Item item)
     {
-
+        return true;
     }
 
-    public void getItemDatabase()
+    public Item getItem()
     {
-
+        return item;
+    }
+    public String[] getItemDatabase()
+    {
+        return listItem;
     }
 }
