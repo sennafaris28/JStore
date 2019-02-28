@@ -1,8 +1,8 @@
 /**
- * Write a description of class DatabaseItem here.
+ * Databasa Item Class
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Senna Faris
+ * @version 28/02/19
  */
 public class DatabaseItem
 {

@@ -10,12 +10,18 @@ public class Location
     private String province;
     private String description;
     private String city;
+    /**
+     * Constructor
+     */
     public Location()
     {
         String province;
         String description;
         String city;
     }
+    /** 
+     * List of accessors to access the value of an instance
+     */
     public String getProvince()
     {
        return province;
@@ -32,6 +38,9 @@ public class Location
     {
         this.province = province;
     }
+    /**
+     * List of mutators to modify the value of an instance
+     */
     public void setCity(String city)
     {
         this.city = city;
@@ -40,6 +49,9 @@ public class Location
     {
         this.description = description;
     }
+    /**
+     * This method is used to print the province of the instance
+     */
     public void printData()
     {
         System.out.println(province);

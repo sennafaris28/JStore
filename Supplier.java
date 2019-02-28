@@ -1,8 +1,8 @@
 /**
- * Write a description of class Supplier here.
+ * Supplier Class
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Senna Faris
+ * @version 28/02/19
  */
 public class Supplier
 {
@@ -11,6 +11,9 @@ public class Supplier
     private String email;
     private String phoneNumber;
     private Location location;
+    /**
+     * Constructor
+     */
     public Supplier()
     {
         int id;
@@ -19,6 +22,9 @@ public class Supplier
         int phoneNumber;
         Location location;
     }
+    /**
+     * List of accessors to access the instance value
+     */
     public int getId()
     {
         return id;
@@ -39,6 +45,9 @@ public class Supplier
     {
         return location;
     }
+    /**
+     * List of mutator to modify the instance value
+     */
     public void setId(int id)
     {
         this.id = id;
@@ -59,6 +68,9 @@ public class Supplier
     {
         this.location = location;
     }
+    /**
+     * This method is to print the name value of the instance
+     */
     public void printData()
     {
         System.out.println(name);

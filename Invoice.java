@@ -10,6 +10,9 @@ public class Invoice
     private Item item;
     private String date;
     private int totalPrice;
+    /**
+     * Constructor
+     */
     public Invoice()
     {
         int id;
@@ -17,6 +20,9 @@ public class Invoice
         String date;
         int totalPrice;
     }
+    /** 
+     * List of accessors to access the value of an instance
+     */
     public int getId()
     {
         return id;
@@ -33,6 +39,9 @@ public class Invoice
     {
         return totalPrice;
     }
+    /**
+     * List of mutators to modify the value of an instance
+     */
     public void setId(int id) 
     {
         this.id = id;

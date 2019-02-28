@@ -1,9 +1,11 @@
 
 /**
- * Write a description of class DatabaseSupplier here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * 
+ * Database Supplier Class
+ * 
+ * @Senna Faris
+ * @version 28/02/19
+ *  
  */
 public class DatabaseSupplier
 {
