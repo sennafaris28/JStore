@@ -19,95 +19,100 @@ public class Item
     /**
      * Constructor of Item
      */
-    public Item()
+    public Item(int id,
+        String name,
+        int stock,
+        int price,
+        String category,
+        Supplier supplier)
     {
-        int id;
-        String name;
-        int stock;
-        int price;
-        String category;
-        Supplier supplier;
+        this.id = id;
+        this.name = name;
+        this.stock = stock;
+        this.price = price;
+        this.category = category;
+        this.supplier = supplier;
     }
     public int getId()
     /**
-     * This method is used to get the id value
+     * Accessor for ID
      */
     {
         return id;
     }
     public String getName()
     /**
-     * This method is used to get the name value
+     * Accessor for name value
      */
     {
         return name;
     }
     public int getStock() 
     /**
-     * This method is used to get the stock value
+     * Accessor for stock value
      */
     {
         return stock;
     }
     public int getPrice()
     /**
-     * This method is used to get the price value
+     * Accessor for price value
      */
     {
         return price;
     }
     public String getCategory()
     /**
-     * This method is used to get the category value
+     * Accessor for category value
      */
     {
         return category;
     } 
     public Supplier getSupplier()
     /** 
-     * This method is used to get the supplier value
+     * Accessor for supplier value
      */
     {
         return supplier;
     }
     public void setId(int id)
     /** 
-     * This is a mutator for id
+     * Mutator for id
      */
     {
         this.id = id;
     }
     public void setName(String name)
     /**
-     * This is a mutator for name
+     * Mutator for name
      */
     {
         this.name = name;
     }
     public void setStock(int stock) 
     /**
-     * This is a mutator for stock
+     * Mutator for stock
      */
     {
         this.stock = stock;
     }
     public void setPrice(int price)
     /**
-     * This is a mutator for price
+     * Mutator for price
      */
     {
         this.price = price;
     }
     public void setCategory(String category)
     /** 
-     * This is a mutator for category
+     * Mutator for category
      */
     {
         this.category = category;
     }  
     public void setSupplier(Supplier supplier)
     /** 
-     * This is a mutator for supplier
+     * Mutator for supplier
      */
     {
         this.supplier = supplier;

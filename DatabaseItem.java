@@ -9,20 +9,30 @@ public class DatabaseItem
     private String[] listItem;
     private Item item;
     
+    /***
+     * This method is used to add item 
+     */
     public boolean addItem(Item item)
     {
         return true;
     }
-
+    /***
+     * This method is used to remove item 
+     */
     public boolean removeItem(Item item)
     {
         return true;
     }
-
+    /***
+     * This method is used to get item value
+     */
     public Item getItem()
     {
         return item;
     }
+    /***
+     * This method is used to get the list of items in the database 
+     */
     public String[] getItemDatabase()
     {
         return listItem;

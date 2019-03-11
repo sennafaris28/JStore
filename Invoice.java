@@ -1,8 +1,8 @@
 /**
- * Write a description of class Invoice here.
+ * Invoice Class
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Senna Faris
+ * @version 28/02/19
  */
 public class Invoice
 {
@@ -13,52 +13,77 @@ public class Invoice
     /**
      * Constructor
      */
-    public Invoice()
+    public Invoice(int id,
+        Item item,
+        String date,
+        int totalPrice)
     {
-        int id;
-        Item item;
-        String date;
-        int totalPrice;
+        this.id = id;
+        this.item = item;
+        this.date = date;
+        this.totalPrice = totalPrice;
     }
-    /** 
-     * List of accessors to access the value of an instance
-     */
+    
     public int getId()
+    /***
+     * Accessor for Invoice ID
+     */
     {
         return id;
     }
     public Item getItem()
+    /***
+     * Accessor for Item
+     */
     {
         return item;
     }
     public String getDate()
+    /***
+     * Accessor for Date
+     */
     {
         return date;
     }
     public int getTotalPrice()
+    /***
+     * Accessor for Total Price
+     */
     {
         return totalPrice;
     }
-    /**
-     * List of mutators to modify the value of an instance
-     */
     public void setId(int id) 
+    /***
+     * Mutator for ID
+     */
     {
         this.id = id;
     }
     public void setItem(Item item)
+    /***
+     * Mutator for Item
+     */
     {
         this.item = item;
     }
     public void setDate(String date)
+    /***
+     * Mutator for Date 
+     */
     {
         this.date = date;
     }
     public void setTotalPrice(int totalPrice)
+    /***
+     * Mutator for Total Price
+     */
     {
         this.totalPrice = totalPrice;
     }
     public void printData()
+    /***
+     * This method is used to print the total price
+     */
     {
         System.out.println(totalPrice);
     }

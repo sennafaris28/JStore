@@ -1,8 +1,9 @@
 #BlueJ class context
 comment0.target=Item
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Item\ here.\r\n\r\n\ @author\ (your\ name)\r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=Item()
+comment0.text=\r\n\ \r\n\ Item\ Class\r\n\ \r\n\ @Senna\ Faris\r\n\ @version\ 28/02/19\r\n\ \ \r\n
+comment1.params=id\ name\ stock\ price\ category\ supplier
+comment1.target=Item(int,\ java.lang.String,\ int,\ int,\ java.lang.String,\ Supplier)
+comment1.text=\r\n\ Constructor\ of\ Item\r\n
 comment10.params=stock
 comment10.target=void\ setStock(int)
 comment11.params=price

@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Location here.
+ * Location Class
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @Senna Faris
+ * @version 28/02/19
+ * 
  */
 public class Location
 {
@@ -13,39 +14,51 @@ public class Location
     /**
      * Constructor
      */
-    public Location()
+    public Location(String province, String description, String city)
     {
-        String province;
-        String description;
-        String city;
+        this.province = province;
+        this.description = description;
+        this.city = city;
     }
-    /** 
-     * List of accessors to access the value of an instance
-     */
     public String getProvince()
+    /***
+     * Accessor for Province value
+     */
     {
        return province;
     }
     public String getCity()
+    /***
+     * Accessor for City value
+     */
     {
         return city;
     }
     public String getDescription()
+    /***
+     * Accessor for Description value
+     */
     {
         return description;
     }
-    public void setProvince(String province) 
+    public void setProvince(String province)
+    /***
+     * Mutator of Province value
+     */ 
     {
         this.province = province;
     }
-    /**
-     * List of mutators to modify the value of an instance
-     */
     public void setCity(String city)
+    /***
+     * Mutator of City value
+     */ 
     {
         this.city = city;
     }
     public void setDescription(String description)
+    /***
+     * Mutator of Description value
+     */ 
     {
         this.description = description;
     }
