@@ -21,8 +21,8 @@ public class Transaction
     {
         Item item1 = new Item(2, "Bangku", 2, ItemStatus.Second, 1, ItemCategory.Furniture, supplier);
         DatabaseItem.itemDB = item1;
-        Invoice invoice1 = new Invoice(1, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
-        item1.setStatus(ItemStatus.New);
+        Invoice invoice1 = new Invoice(2, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
+        item1.setStatus(ItemStatus.Second);
         invoice1.setInvoiceStatus(InvoiceStatus.Paid);
         item1.printData();
         invoice1.printData();
@@ -32,8 +32,8 @@ public class Transaction
     {
         Item item1 = new Item(3, "Kursi", 2, ItemStatus.Refurbished, 1, ItemCategory.Furniture, supplier);
         DatabaseItem.itemDB = item1;
-        Invoice invoice1 = new Invoice(1, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
-        item1.setStatus(ItemStatus.New);
+        Invoice invoice1 = new Invoice(3, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
+        item1.setStatus(ItemStatus.Refurbished);
         invoice1.setInvoiceStatus(InvoiceStatus.Paid);
         item1.printData();
         invoice1.printData();
@@ -41,7 +41,7 @@ public class Transaction
     
     public void sellItemPaid(Item item)
     {
-        Invoice invoice1 = new Invoice(4, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
+        Invoice invoice1 = new Invoice(1, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
         invoice1.setInvoiceStatus(InvoiceStatus.Paid);
         item.setStatus(ItemStatus.Sold);
         invoice1.printData();        
@@ -49,7 +49,7 @@ public class Transaction
     
     public void sellItemUnpaid(Item item)
     {
-        Invoice invoice1 = new Invoice(4, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
+        Invoice invoice1 = new Invoice(2, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
         invoice1.setInvoiceStatus(InvoiceStatus.Unpaid);
         item.setStatus(ItemStatus.Sold);
         invoice1.printData(); 
@@ -57,7 +57,7 @@ public class Transaction
     
     public void sellItemInstallment(Item item)
     {
-        Invoice invoice1 = new Invoice(4, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
+        Invoice invoice1 = new Invoice(3, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
         invoice1.setInvoiceStatus(InvoiceStatus.Installment);
         item.setStatus(ItemStatus.Sold);
         invoice1.printData(); 
