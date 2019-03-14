@@ -148,6 +148,6 @@ public class Item
         System.out.println("Harga = " + price);
         System.out.println("Kategori = " + category);
         System.out.println("Status = " + status);
-        System.out.println("Supplier = " + supplier);
+        System.out.println("Supplier = " + supplier.getName());
     }
 }

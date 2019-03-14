@@ -111,7 +111,7 @@ public class Invoice
     {
         System.out.println("Invoice dan ID");
         System.out.println("ID = " + id);
-        System.out.println("Item = " + item);
+        System.out.println("Item = " + item.getName());
         System.out.println("Tanggal = " + date);
         System.out.println("Harga = " + totalPrice);
         System.out.println("Jumlah = " + totalItem);

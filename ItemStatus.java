@@ -7,6 +7,7 @@
  */
 public enum ItemStatus
 {
+
     New("New"), Second("Second"), Refurbished("Refurbished"), Sold("Sold)");
     
    private String ItemStatus;
