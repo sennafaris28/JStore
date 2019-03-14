@@ -1,3 +1,4 @@
+
 /**
  * Invoice Class
  *
@@ -10,18 +11,25 @@ public class Invoice
     private Item item;
     private String date;
     private int totalPrice;
+    private int totalItem;
+    private InvoiceStatus status;
     /**
      * Constructor
      */
-    public Invoice(int id,
+    public Invoice(
+        int id,
         Item item,
         String date,
-        int totalPrice)
+        int totalPrice,
+        int totalItem,
+        InvoiceStatus status)
     {
         this.id = id;
         this.item = item;
         this.date = date;
         this.totalPrice = totalPrice;
+        this.totalItem = totalItem;
+        this.status = status;
     }
     
     public int getId()
@@ -52,6 +60,14 @@ public class Invoice
     {
         return totalPrice;
     }
+    public int getTotalItem()
+    {
+        return totalItem;
+    }
+    public InvoiceStatus getInvoiceStatus()
+    {
+        return status;
+    }
     public void setId(int id) 
     /***
      * Mutator for ID
@@ -80,11 +96,25 @@ public class Invoice
     {
         this.totalPrice = totalPrice;
     }
+    public void setTotalItem(int totalItem)
+    {
+        this.totalItem = totalItem;
+    }
+    public void setInvoiceStatus(InvoiceStatus status)
+    {
+        this.status = status;
+    }
     public void printData()
     /***
      * This method is used to print the total price
      */
     {
-        System.out.println(totalPrice);
+        System.out.println("Invoice dan ID");
+        System.out.println("ID = " + id);
+        System.out.println("Item = " + item);
+        System.out.println("Tanggal = " + date);
+        System.out.println("Harga = " + totalPrice);
+        System.out.println("Jumlah = " + totalItem);
+        System.out.println("Status = " + status);
     }
 }

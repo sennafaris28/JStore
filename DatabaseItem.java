@@ -7,7 +7,7 @@
 public class DatabaseItem
 {
     private String[] listItem;
-    private Item item;
+    public static Item itemDB;
     
     /***
      * This method is used to add item 
@@ -28,7 +28,7 @@ public class DatabaseItem
      */
     public Item getItem()
     {
-        return item;
+        return itemDB;
     }
     /***
      * This method is used to get the list of items in the database 

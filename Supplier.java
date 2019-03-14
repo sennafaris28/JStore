@@ -97,6 +97,11 @@ public class Supplier
      */
     public void printData()
     {
-        System.out.println(name);
+        System.out.println("Supplier dan ID");
+        System.out.println("ID = " + id);
+        System.out.println("Nama = " + name);
+        System.out.println("Email = " + email);
+        System.out.println("No. Telpon = " + phoneNumber);
+        System.out.println("Lokasi = " + location);
     }
 }

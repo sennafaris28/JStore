@@ -13,17 +13,20 @@ public class Item
     private String name;
     private int stock;
     private int price;
-    private String category;
+    private ItemCategory category;
+    private ItemStatus status;
     private Supplier supplier; 
     
     /**
      * Constructor of Item
      */
-    public Item(int id,
+    public Item(
+        int id,
         String name,
         int stock,
+        ItemStatus status,
         int price,
-        String category,
+        ItemCategory category,
         Supplier supplier)
     {
         this.id = id;
@@ -32,6 +35,8 @@ public class Item
         this.price = price;
         this.category = category;
         this.supplier = supplier;
+        this.status = status;
+        this.category = category;
     }
     public int getId()
     /**
@@ -61,13 +66,20 @@ public class Item
     {
         return price;
     }
-    public String getCategory()
+    public ItemCategory getCategory()
     /**
      * Accessor for category value
      */
     {
         return category;
-    } 
+    }
+    public ItemStatus getStatus()
+    /**
+     * Accessor for category value
+     */
+    {
+        return status;
+    }
     public Supplier getSupplier()
     /** 
      * Accessor for supplier value
@@ -103,13 +115,20 @@ public class Item
     {
         this.price = price;
     }
-    public void setCategory(String category)
+    public void setCategory(ItemCategory category)
     /** 
      * Mutator for category
      */
     {
         this.category = category;
-    }  
+    }
+    public void setStatus(ItemStatus category)
+    /** 
+     * Mutator for category
+     */
+    {
+        this.status = status;
+    } 
     public void setSupplier(Supplier supplier)
     /** 
      * Mutator for supplier
@@ -122,6 +141,13 @@ public class Item
      * This method will print the name value of the instance
      */
     {
-        System.out.println(name);
+        System.out.println("Item dan ID");
+        System.out.println("ID = " + id);
+        System.out.println("Nama = " + name);
+        System.out.println("Stok = " + stock);
+        System.out.println("Harga = " + price);
+        System.out.println("Kategori = " + category);
+        System.out.println("Status = " + status);
+        System.out.println("Supplier = " + supplier);
     }
 }
