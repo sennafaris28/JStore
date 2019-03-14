@@ -14,6 +14,12 @@ public class JStore
         Supplier supplier1 = new Supplier(8, "Bang Udin", "udin@carikuli.com", "888999", location1);
         Transaction transaction1 = new Transaction();
         
+        System.out.println("-----Lokasi-----");
+        location1.printData();
+        
+        System.out.println("-----Supplier-----");
+        supplier1.printData();
+        
         System.out.println("-----Order New Item-----");
         transaction1.orderNewItem(supplier1);
         
