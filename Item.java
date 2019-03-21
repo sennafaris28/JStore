@@ -141,11 +141,12 @@ public class Item
      * This method will print the name value of the instance
      */
     {
-        System.out.println("Item dan ID");
+        System.out.println("==========Item===========");
         System.out.println("ID = " + id);
         System.out.println("Nama = " + name);
         System.out.println("Kategori = " + category);
         System.out.println("Status = " + status);
         System.out.println("Supplier = " + supplier.getName());
+        System.out.println("=========================");
     }
 }

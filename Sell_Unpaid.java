@@ -49,7 +49,7 @@ public class Sell_Unpaid extends Invoice
     }
     public void printData()
     {
-        System.out.println("=====Invoice dan ID=====");
+        System.out.println("========Invoice========");
         System.out.println("ID = " + getId());
         System.out.println("Item = " + getItem().getName());
         System.out.println("Tanggal = " + getDate());
@@ -58,6 +58,6 @@ public class Sell_Unpaid extends Invoice
         System.out.println("Status = " + INVOICE_STATUS);
         System.out.println("Tipe = " + INVOICE_TYPE);
         System.out.println("Jatuh Tempo = " + dueDate);
-        System.out.println("=========================");        
+        System.out.println("=========================");     
     }
 }

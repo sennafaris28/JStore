@@ -42,7 +42,7 @@ public class Sell_Paid extends Invoice
     }
     public void printData()
     {
-        System.out.println("=====Invoice dan ID=====");
+        System.out.println("========Invoice========");
         System.out.println("ID = " + getId());
         System.out.println("Item = " + getItem().getName());
         System.out.println("Tanggal = " + getDate());
