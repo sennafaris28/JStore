@@ -144,8 +144,6 @@ public class Item
         System.out.println("Item dan ID");
         System.out.println("ID = " + id);
         System.out.println("Nama = " + name);
-        System.out.println("Stok = " + stock);
-        System.out.println("Harga = " + price);
         System.out.println("Kategori = " + category);
         System.out.println("Status = " + status);
         System.out.println("Supplier = " + supplier.getName());

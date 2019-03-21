@@ -16,6 +16,11 @@ public enum ItemStatus
     {
         this.ItemStatus = ItemStatus;
     }
+    
+    private String ItemStatus()
+    {
+        return ItemStatus();
+    }
 }
     
     

@@ -102,6 +102,6 @@ public class Supplier
         System.out.println("Nama = " + name);
         System.out.println("Email = " + email);
         System.out.println("No. Telpon = " + phoneNumber);
-        System.out.println("Lokasi = " + location);
+        System.out.println("Lokasi = " + location.getProvince());
     }
 }

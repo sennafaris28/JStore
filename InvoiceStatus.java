@@ -11,8 +11,14 @@ public enum InvoiceStatus
     
     private String InvoiceStatus;
     
-    private InvoiceStatus(String InvoiceStatus) {
+    private InvoiceStatus(String InvoiceStatus) 
+    {
         this.InvoiceStatus = InvoiceStatus;
+    }
+    
+    private String InvoiceStatus()
+    {
+        return InvoiceStatus();
     }
 }
 

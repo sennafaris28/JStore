@@ -6,61 +6,58 @@
  */
 public class Transaction
 {
-    public void orderNewItem(Supplier supplier)
+    public void orderNewItem(Item item)
     {
-        Item item1 = new Item(1, "Meja", 2, ItemStatus.New, 10, ItemCategory.Furniture, supplier);
-        DatabaseItem.itemDB = item1;
-        Invoice invoice1 = new Invoice(1, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
-        item1.setStatus(ItemStatus.New);
-        invoice1.setInvoiceStatus(InvoiceStatus.Paid);
-        item1.printData();
-        invoice1.printData();
+        item.setStatus(ItemStatus.New);
+        Invoice buy_paid1 = new Buy_Paid(1, item, "17-8-2020", item.getPrice(), 10);
+        if (buy_paid1 instanceof Sell_Paid) {
+            System.out.println("Benar Invoice Type adalah Sell_Paid");
+        }
+        else {
+            System.out.println("Salah, Invoice Type bukan Sell_Paid");
+        }
+        buy_paid1.printData();
+        item.printData();
     }
     
-    public void orderSecondItem(Supplier supplier)
+    public void orderSecondItem(Item item)
     {
-        Item item1 = new Item(2, "Bangku", 2, ItemStatus.Second, 1, ItemCategory.Furniture, supplier);
-        DatabaseItem.itemDB = item1;
-        Invoice invoice1 = new Invoice(2, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
-        item1.setStatus(ItemStatus.Second);
-        invoice1.setInvoiceStatus(InvoiceStatus.Paid);
-        item1.printData();
-        invoice1.printData();
+        item.setStatus(ItemStatus.Second);
+        Invoice buy_paid1 = new Buy_Paid(1, item, "17-8-2020", item.getPrice(), 10);
+        buy_paid1.printData();
+        item.printData();
     }
     
-    public void orderRefurbishedItem(Supplier supplier)
+    public void orderRefurbishedItem(Item item)
     {
-        Item item1 = new Item(3, "Kursi", 2, ItemStatus.Refurbished, 1, ItemCategory.Furniture, supplier);
-        DatabaseItem.itemDB = item1;
-        Invoice invoice1 = new Invoice(3, item1, "2-3-19", item1.getPrice(),1, InvoiceStatus.Unpaid);
-        item1.setStatus(ItemStatus.Refurbished);
-        invoice1.setInvoiceStatus(InvoiceStatus.Paid);
-        item1.printData();
-        invoice1.printData();
+        item.setStatus(ItemStatus.Refurbished);
+        Invoice buy_paid1 = new Buy_Paid(1, item, "17-8-2020", item.getPrice(), 10);
+        buy_paid1.printData();
+        item.printData();
     }
     
     public void sellItemPaid(Item item)
     {
-        Invoice invoice1 = new Invoice(1, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
-        invoice1.setInvoiceStatus(InvoiceStatus.Paid);
         item.setStatus(ItemStatus.Sold);
-        invoice1.printData();        
+        Invoice sell_paid1 = new Sell_Paid(1, item, "17-8-2020", item.getPrice(), 10);
+        sell_paid1.printData();
+        item.printData();
     }
     
     public void sellItemUnpaid(Item item)
     {
-        Invoice invoice1 = new Invoice(2, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
-        invoice1.setInvoiceStatus(InvoiceStatus.Unpaid);
         item.setStatus(ItemStatus.Sold);
-        invoice1.printData(); 
+        Invoice sell_unpaid1 = new Sell_Unpaid(1, item, "17-8-2020", 10, item.getPrice(), "18-8-2020");
+        sell_unpaid1.printData();
+        item.printData();
     }
     
     public void sellItemInstallment(Item item)
     {
-        Invoice invoice1 = new Invoice(3, item, "2-3-19", item.getPrice(), 1, InvoiceStatus.Unpaid);
-        invoice1.setInvoiceStatus(InvoiceStatus.Installment);
         item.setStatus(ItemStatus.Sold);
-        invoice1.printData(); 
+        Invoice sell_installment1 = new Sell_Installment(1, item, "17-8-2020", 10, item.getPrice(), 10, 0);
+        sell_installment1.printData();
+        item.printData();
     }
     
     

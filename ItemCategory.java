@@ -11,7 +11,13 @@ public enum ItemCategory
     
     private String ItemCategory;
     
-    private ItemCategory(String ItemCategory) {
+    private ItemCategory(String ItemCategory) 
+    {
         this.ItemCategory = ItemCategory;
+    }
+    
+    private String ItemCategory()
+    {
+        return ItemCategory();
     }
 }

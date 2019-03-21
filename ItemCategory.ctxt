@@ -3,4 +3,6 @@ comment0.target=ItemCategory
 comment0.text=\r\n\ Enumeration\ class\ ItemCategory\ \r\n\r\n\ @author\ (your\ name\ here)\r\n\ @version\ (version\ number\ or\ date\ here)\r\n
 comment1.params=ItemCategory
 comment1.target=ItemCategory(java.lang.String)
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ ItemCategory()
+numComments=3

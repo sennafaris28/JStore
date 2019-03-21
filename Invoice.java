@@ -5,14 +5,16 @@
  * @Senna Faris
  * @version 28/02/19
  */
-public class Invoice
+public abstract class Invoice
 {
+    //Instance Variables
     private int id;
     private Item item;
     private String date;
-    private int totalPrice;
+    protected int totalPrice;
     private int totalItem;
     private InvoiceStatus status;
+    private InvoiceType type;
     /**
      * Constructor
      */
@@ -21,15 +23,14 @@ public class Invoice
         Item item,
         String date,
         int totalPrice,
-        int totalItem,
-        InvoiceStatus status)
+        int totalItem
+        )
     {
         this.id = id;
         this.item = item;
         this.date = date;
         this.totalPrice = totalPrice;
         this.totalItem = totalItem;
-        this.status = status;
     }
     
     public int getId()
@@ -68,6 +69,11 @@ public class Invoice
     {
         return status;
     }
+    public InvoiceType getInvoiceType()
+    {
+        return type;
+    }
+    
     public void setId(int id) 
     /***
      * Mutator for ID
@@ -104,17 +110,5 @@ public class Invoice
     {
         this.status = status;
     }
-    public void printData()
-    /***
-     * This method is used to print the total price
-     */
-    {
-        System.out.println("Invoice dan ID");
-        System.out.println("ID = " + id);
-        System.out.println("Item = " + item.getName());
-        System.out.println("Tanggal = " + date);
-        System.out.println("Harga = " + totalPrice);
-        System.out.println("Jumlah = " + totalItem);
-        System.out.println("Status = " + status);
-    }
+    public abstract void printData();
 }
