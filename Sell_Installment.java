@@ -50,6 +50,8 @@ public class Sell_Installment extends Invoice {
     public void setTotalPrice() {
         // this.totalPrice = installmentPrice * installmentPeriod;
     }
+    public void setInvoiceStatus(InvoiceStatus status){
+    }
 
     public void setCustomer() {
         this.customer = customer;

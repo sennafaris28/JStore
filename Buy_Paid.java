@@ -15,7 +15,7 @@ public class Buy_Paid extends Invoice {
      */
     public Buy_Paid(int id, Item item, int totalItem) {
         super(id, item, totalItem);
-        this.totalPrice = totalItem * item.getPrice();
+        //this.totalPrice = totalItem * item.getPrice();
     }
 
     public InvoiceStatus getInvoiceStatus() {
@@ -25,9 +25,7 @@ public class Buy_Paid extends Invoice {
     public InvoiceType getInvoiceType() {
         return INVOICE_TYPE;
     }
-
-    public String toString() {
-        return toString();
+    public void setInvoiceStatus(InvoiceStatus status){
     }
 
     // public void printData()

@@ -10,6 +10,7 @@ public class JStore
 {
     public static void main(String args[]) 
     {
+        /*
         Location location1 = new Location("Papua", "Pedagang Sagu", "Jayapura");
         Supplier supplier1 = new Supplier(8, "Bang Udin", "udin@carikuli.com", "888999", location1);
         
@@ -38,7 +39,7 @@ public class JStore
         transaction1.sellItemUnpaid(item1);
         
         System.out.println("-----Sell Item Installment-----");
-        transaction1.sellItemInstallment(item1);
+        transaction1.sellItemInstallment(item1); */
         
     }
     

@@ -116,7 +116,7 @@ public class Customer {
 
     public String toString() {
         return "Nama : " + name + "Email : " + email + "Username : " + username + "Password : " + password + "ID : "
-                + id + "birthDate : " + birthdate;
+                + id + "birthDate : " + birthDate;
     }
 
 }

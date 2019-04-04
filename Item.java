@@ -143,10 +143,6 @@ public class Item {
         this.supplier = supplier;
     }
 
-    public String toString() {
-        return toString();
-    }
-
     // public void printData()
     // /**
     // * This method will print the name value of the instance

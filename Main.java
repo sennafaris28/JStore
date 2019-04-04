@@ -16,7 +16,7 @@ public class Main {
         // System.out.println("Masukkan urutan anda");
         // String block
 
-
+/*
         Block block1 = new Block("ABC123", "0", "Data Satu");
         block1.printData();
 
@@ -30,7 +30,7 @@ public class Main {
         block4.printData();
 
         Block block5 = new Block("ABC127", "ABC126", "Data Lima");
-        block5.printData();
+        block5.printData(); */
     }
 
 }

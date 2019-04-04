@@ -102,7 +102,7 @@ public abstract class Invoice
     {
         this.status = status;
     }
-    public abstract void printData();
+    //public abstract void printData();
     public String toString() {
         return toString();
     }

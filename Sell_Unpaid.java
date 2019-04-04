@@ -44,24 +44,9 @@ public class Sell_Unpaid extends Invoice {
     public void setDueDate(Calendar dueDate) {
         this.dueDate = dueDate;
     }
-
-    public String toString() {
-        return toString();
+    public void setInvoiceStatus(InvoiceStatus status){
     }
 
-    // public void printData()
-    // {
-    // System.out.println("========Invoice========");
-    // System.out.println("ID = " + getId());
-    // System.out.println("Item = " + getItem().getName());
-    // System.out.println("Tanggal = " + getDate());
-    // //System.out.println("Harga = " + totalPrice);
-    // System.out.println("Jumlah = " + getTotalItem());
-    // System.out.println("Status = " + INVOICE_STATUS);
-    // System.out.println("Tipe = " + INVOICE_TYPE);
-    // System.out.println("Jatuh Tempo = " + dueDate);
-    // System.out.println("=========================");
-    // }
     public String toString() {
         return "===== Invoice =====" + "ID: " + this.getId() + "Item: " + this.getItem().getName() + "Amount:"
                 + this.getTotalItem() + "Buy Date: " + this.getDate() + "Price: " + this.getItem().getPrice()

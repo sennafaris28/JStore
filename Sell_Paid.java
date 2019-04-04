@@ -17,7 +17,7 @@ public class Sell_Paid extends Invoice {
      */
     public Sell_Paid(int id, Item item, int totalItem, Customer customer) {
         super(id, item, totalItem);
-        this.totalPrice = totalItem * item.getPrice();
+        //this.totalPrice = totalItem * item.getPrice();
         this.customer = customer;
     }
 
@@ -28,14 +28,15 @@ public class Sell_Paid extends Invoice {
     public InvoiceType getInvoiceType() {
         return INVOICE_TYPE;
     }
-
+    public Customer getCustomer() {
+        return customer;
+    }
     public void setCustomer(Customer customer) {
         this.customer = customer;
     }
-
-    public String toString() {
-        return toString();
+    public void setInvoiceStatus(InvoiceStatus status){
     }
+
 
     // public void printData()
     // {
