@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Block
+comment1.params=hashCode\ previousHash\ data
+comment1.target=Block(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ getHashCode()
+comment3.params=
+comment3.target=java.lang.String\ getPreviousHash()
+comment4.params=
+comment4.target=java.lang.String\ data()
+comment5.params=hashCode
+comment5.target=void\ setHashCode(java.lang.String)
+comment6.params=previousHash
+comment6.target=void\ setPreviousHash(java.lang.String)
+comment7.params=data
+comment7.target=void\ setData(java.lang.String)
+comment8.params=
+comment8.target=void\ printData()
+numComments=9

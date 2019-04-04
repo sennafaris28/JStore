@@ -4,24 +4,24 @@
  * @Senna Faris
  * @version 28/02/19
  */
-public class Supplier
-{
+public class Supplier {
     private int id;
     private String name;
     private String email;
     private String phoneNumber;
     private Location location;
+
     /**
      * Constructor
      */
-    public Supplier(int id, String name, String email, String phoneNumber, Location location)
-    {
+    public Supplier(int id, String name, String email, String phoneNumber, Location location) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.location = location;
     }
+
     public int getId()
     /***
      * Accessor for ID
@@ -29,6 +29,7 @@ public class Supplier
     {
         return id;
     }
+
     public String getName()
     /***
      * Accessor for name
@@ -36,6 +37,7 @@ public class Supplier
     {
         return name;
     }
+
     public String getEmail()
     /***
      * Accessor for email
@@ -43,6 +45,7 @@ public class Supplier
     {
         return email;
     }
+
     public String getPhoneNumber()
     /***
      * Accessor for Phone Number
@@ -50,6 +53,7 @@ public class Supplier
     {
         return phoneNumber;
     }
+
     public Location getLocation()
     /***
      * Accessor for Location
@@ -57,6 +61,7 @@ public class Supplier
     {
         return location;
     }
+
     public void setId(int id)
     /***
      * Mutator of ID
@@ -64,6 +69,7 @@ public class Supplier
     {
         this.id = id;
     }
+
     public void setName(String name)
     /***
      * Mutator of name
@@ -71,6 +77,7 @@ public class Supplier
     {
         this.name = name;
     }
+
     public void setEmail(String email)
     /***
      * Mutator of email
@@ -78,6 +85,7 @@ public class Supplier
     {
         this.email = email;
     }
+
     public void setPhoneNumber(String phoneNumber)
     /***
      * Mutator of Phone Number
@@ -85,6 +93,7 @@ public class Supplier
     {
         this.phoneNumber = phoneNumber;
     }
+
     public void setLocation(Location location)
     /***
      * Mutator of Location
@@ -92,16 +101,21 @@ public class Supplier
     {
         this.location = location;
     }
+
     /**
      * This method is to print the name value of the instance
      */
-    public void printData()
-    {
-        System.out.println("Supplier dan ID");
-        System.out.println("ID = " + id);
-        System.out.println("Nama = " + name);
-        System.out.println("Email = " + email);
-        System.out.println("No. Telpon = " + phoneNumber);
-        System.out.println("Lokasi = " + location.getProvince());
+    // public void printData()
+    // {
+    // System.out.println("Supplier dan ID");
+    // System.out.println("ID = " + id);
+    // System.out.println("Nama = " + name);
+    // System.out.println("Email = " + email);
+    // System.out.println("No. Telpon = " + phoneNumber);
+    // System.out.println("Lokasi = " + location.getProvince());
+    // }
+    public String toString() {
+        return "ID : " + id + "Nama : " + name + "Email : " + email + "Telpon : " + phoneNumber + "Lokasi : "
+                + location.getProvince();
     }
 }

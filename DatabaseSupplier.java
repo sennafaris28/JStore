@@ -9,35 +9,22 @@
  */
 public class DatabaseSupplier
 {
-    private String[] listSupplier;
+    // instance variables - replace the example below with your own
+    private Supplier[] listSupplier;
     private Supplier supplier;
     
     public boolean addSupplier(Supplier supplier)
-    /***
-     * This method is used to add Supplier
-     */
     {
         return true;
     }
-    public void removeSupplier(Supplier supplier)
-    /***
-     * This method is used to remove Supplier
-     */
+    public void removeSupplier(Supplier supplier) 
     {
-        this.supplier = supplier;
+        
     }
-    public Supplier getSupplier()
-    /***
-     * Accessor for Supplier
-     */
-    {
+    public Supplier getSupplier() {
         return supplier;
     }
-    public String[] getListSupplier()    
-    /***
-     * Accessor for Supplier List
-     */
-    {
+    public Supplier[] getListSupplier() {
         return listSupplier;
     }
 }

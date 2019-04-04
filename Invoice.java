@@ -1,4 +1,4 @@
-
+import java.util.Calendar;
 /**
  * Invoice Class
  *
@@ -10,8 +10,8 @@ public abstract class Invoice
     //Instance Variables
     private int id;
     private Item item;
-    private String date;
-    protected int totalPrice;
+    private Calendar date = Calendar.getInstance();
+    private int totalPrice;
     private int totalItem;
     private InvoiceStatus status;
     private InvoiceType type;
@@ -21,16 +21,13 @@ public abstract class Invoice
     public Invoice(
         int id,
         Item item,
-        String date,
-        int totalPrice,
         int totalItem
         )
     {
         this.id = id;
         this.item = item;
-        this.date = date;
-        this.totalPrice = totalPrice;
         this.totalItem = totalItem;
+        this.totalPrice = totalItem * item.getPrice();
     }
     
     public int getId()
@@ -47,7 +44,7 @@ public abstract class Invoice
     {
         return item;
     }
-    public String getDate()
+    public Calendar getDate()
     /***
      * Accessor for Date
      */
@@ -65,14 +62,9 @@ public abstract class Invoice
     {
         return totalItem;
     }
-    public InvoiceStatus getInvoiceStatus()
-    {
-        return status;
-    }
-    public InvoiceType getInvoiceType()
-    {
-        return type;
-    }
+    public abstract InvoiceStatus getInvoiceStatus();
+    
+    public abstract InvoiceType getInvoiceType();
     
     public void setId(int id) 
     /***
@@ -88,7 +80,7 @@ public abstract class Invoice
     {
         this.item = item;
     }
-    public void setDate(String date)
+    public void setDate(Calendar date)
     /***
      * Mutator for Date 
      */
@@ -100,7 +92,7 @@ public abstract class Invoice
      * Mutator for Total Price
      */
     {
-        this.totalPrice = totalPrice;
+        this.totalPrice = totalItem * item.getPrice();
     }
     public void setTotalItem(int totalItem)
     {
@@ -111,4 +103,7 @@ public abstract class Invoice
         this.status = status;
     }
     public abstract void printData();
+    public String toString() {
+        return toString();
+    }
 }
