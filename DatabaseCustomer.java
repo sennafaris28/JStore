@@ -21,37 +21,33 @@ public class DatabaseCustomer {
     }
 
     public static boolean addCustomer(Customer customer) {
-        boolean temp = false;
         for (Customer customerDB : CUSTOMER_DATABASE) {
-            if ((customerDB.getName() == customer.getName()) || (customerDB.getName() == customer.getName())) {
-                temp = false;
+            if (customerDB.getName() == customer.getName() && customerDB.getEmail() == customer.getEmail()) {
+                return false;
             }
         }
         CUSTOMER_DATABASE.add(customer);
         LAST_CUSTOMER_ID = customer.getId();
-        temp = true;
-        return temp;
+        return true;
     }
 
     public static Customer getCustomer(int id) {
-        Customer temp = null;
         for (Customer customer : CUSTOMER_DATABASE) {
             if (customer.getId() == id) {
-                temp = customer;
+                return customer;
             }
         }
-        return temp;
+        return null;
     }
 
     public static boolean removeCustomer(int id) {
-        boolean temp = false;
         for (Customer customerDB : CUSTOMER_DATABASE) {
             if (customerDB.getId() == id) {
-                CUSTOMER_DATABASE.remove(id);
-                temp = true;
+                CUSTOMER_DATABASE.remove(customerDB);
+                return true;
             }
         }
-        return temp;
+        return false;
     }
 
 }

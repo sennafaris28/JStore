@@ -25,37 +25,32 @@ public class DatabaseInvoice {
     }
 
     public static Invoice getInvoice(int id) {
-        Invoice temp = null;
         for (Invoice invoice : INVOICE_DATABASE) {
             if (invoice.getId() == id) {
-                temp = invoice;
+                return invoice;
             }
         }
-        return temp;
+        return null;
     }
 
     public static Invoice getActiveOrder(Customer customer) {
-        Invoice temp = null;
         for (Invoice invoice : INVOICE_DATABASE) {
             if ((invoice.getInvoiceStatus() == InvoiceStatus.Unpaid
                     || invoice.getInvoiceStatus() == InvoiceStatus.Installment) && invoice.getIsActive() == true) {
-                temp = invoice;
-            } else {
-                temp = null;
+                return invoice;
             }
         }
-        return temp;
+        return null;
     }
 
     public static boolean removeInvoice(int id) {
-        boolean temp = false;
         for (Invoice invoice : INVOICE_DATABASE) {
             if ((invoice.getId() == id) && (invoice.getIsActive() == true)) {
                 invoice.setIsActive(false);
                 INVOICE_DATABASE.remove(invoice);
-                temp = true;
+                return true;
             }
         }
-        return temp;
+        return false;
     }
 }

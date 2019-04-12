@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  *
@@ -22,27 +22,24 @@ public class DatabaseSupplier {
     }
 
     public static boolean addSupplier(Supplier supplier) {
-        boolean temp = false;
         for (Supplier supplierDB : SUPPLIER_DATABASE) {
-            if ((supplierDB.getName() == supplier.getName()) || (supplierDB.getEmail() == supplier.getEmail())
-                    || (supplierDB.getPhoneNumber() == supplier.getPhoneNumber())) {
-                temp = false;
+            if ((supplierDB.getName() == supplier.getName()) && (supplierDB.getEmail() == supplier.getEmail())
+                    && (supplierDB.getPhoneNumber() == supplier.getPhoneNumber())) {
+                return false;
             }
         }
         SUPPLIER_DATABASE.add(supplier);
         LAST_SUPPLIER_ID = supplier.getId();
-        temp = true;
-        return temp;
+        return true;
     }
 
     public static Supplier getSupplier(int id) {
-        Supplier temp = null;
         for (Supplier supplierDB : SUPPLIER_DATABASE) {
             if (supplierDB.getId() == id) {
-                temp = supplierDB;
+                return supplierDB;
             }
         }
-        return temp;
+        return null;
     }
 
     public static boolean removeSupplier(int id) {

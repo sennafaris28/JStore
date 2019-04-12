@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Databasa Item Class
@@ -19,76 +19,81 @@ public class DatabaseItem {
     }
 
     public static boolean addItem(Item item) {
-        boolean temp = false;
         for (Item itemDB : ITEM_DATABASE) {
-            if ((item.getName() != itemDB.getName()) && (item.getStatus() != itemDB.getStatus())
-                    && (item.getSupplier() != itemDB.getSupplier())) {
-                ITEM_DATABASE.add(item);
-                LAST_ITEM_ID = item.getId();
-                temp = true;
-            } else {
-                temp = false;
+            if ((item.getName() == itemDB.getName()) && (item.getStatus() == itemDB.getStatus())
+                    && (item.getSupplier() == itemDB.getSupplier())) {
+                return false;
             }
         }
-        return temp;
+        ITEM_DATABASE.add(item);
+        LAST_ITEM_ID = item.getId();
+        return true;
     }
 
     public static Item getItemFromID(int id) {
-        Item temp = null;
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getId() == id) {
-                temp = itemDB;
+                return itemDB;
             }
         }
-        return temp;
+        return null;
     }
 
     public static ArrayList<Item> getItemFromSupplier(Supplier supplier) {
-        ArrayList<Item> temp = new ArrayList<>();
+        boolean temp = false;
+        ArrayList<Item> list = new ArrayList<>();
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getSupplier() == supplier) {
-                temp.add(itemDB);
-            } else {
-                temp = null;
+                list.add(itemDB);
+                temp = true;
             }
         }
-        return temp;
+        if (temp) {
+            return list;
+        } else {
+            return null;
+        }
     }
 
     public static ArrayList<Item> getItemFromCategory(ItemCategory category) {
-        ArrayList<Item> temp = new ArrayList<>();
+        boolean temp = false;
+        ArrayList<Item> list = new ArrayList<Item>();
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getCategory() == category) {
-                temp.add(itemDB);
+                list.add(itemDB);
+                temp = true;
             }
         }
-        if (temp.size() > 0) {
-            return temp;
+        if (temp) {
+            return list;
         } else {
             return null;
         }
     }
 
     public static ArrayList<Item> getItemFromStatus(ItemStatus status) {
-        ArrayList<Item> temp = new ArrayList<>();
+        boolean temp = false;
+        ArrayList<Item> list = new ArrayList<Item>();
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getStatus() == status) {
-                temp.add(itemDB);
-            } else {
-                temp = null;
-            }
-        }
-        return temp;
-    }
-
-    public static boolean removeItem(int id) {
-        boolean temp = false;
-        for (Item itemDB : ITEM_DATABASE) {
-            if (itemDB.getId() == id) {
-                ITEM_DATABASE.remove(id);
+                list.add(itemDB);
                 temp = true;
             }
         }
-        return temp;
+        if (temp) {
+            return list;
+        } else {
+            return null;
+        }
+    }
+
+    public static boolean removeItem(int id) {
+        for (Item itemDB : ITEM_DATABASE) {
+            if (itemDB.getId() == id) {
+                ITEM_DATABASE.remove(itemDB);
+                return true;
+            }
+        }
+        return false;
     }
 }

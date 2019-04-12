@@ -81,8 +81,9 @@ public abstract class Invoice {
      * Mutator for Total Price
      */
     {
-        for(Integer invoice : item) {
-            totalPrice = totalPrice + DatabaseItem.getItemFromID(invoice).getPrice();
+        ArrayList<Integer> listItemID = DatabaseInvoice.getInvoice(id).getItem();
+        for (int invoice : listItemID) {
+            this.totalPrice = totalPrice + DatabaseItem.getItemFromID(invoice).getPrice();
         }
     }
 
@@ -93,9 +94,10 @@ public abstract class Invoice {
     public void setIsActive(boolean isActive) {
         this.isActive = isActive;
     }
+
     public abstract String toString();
     // public abstract void printData();
     // public String toString() {
-       // return toString();
+    // return toString();
     // }
 }

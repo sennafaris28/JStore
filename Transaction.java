@@ -81,26 +81,22 @@ public class Transaction {
     }
 
     public boolean finishTransaction(Invoice invoice) {
-        boolean temp = false;
-        for (Invoice invoiceDB : DatabaseInvoice.getInvoiceDatabase()) {
-            if (invoiceDB.getId() == invoice.getId()) {
-                invoice.setIsActive(false);
-                System.out.println(invoice.getIsActive());
-                temp = true;
-            }
+        invoice = DatabaseInvoice.getInvoice(invoice.getId());
+        if (invoice == null) {
+            return false;
         }
-        return temp;
+        invoice.setIsActive(false);
+        System.out.println("Status Aktif = " + invoice.getIsActive());
+        return true;
     }
 
     public boolean cancelTransaction(Invoice invoice) {
-        boolean temp = false;
-        for (Invoice invoiceDB : DatabaseInvoice.getInvoiceDatabase()) {
-            if (invoiceDB.getId() == invoice.getId()) {
-                DatabaseInvoice.removeInvoice(invoice.getId());
-                temp = true;
-            }
+        invoice = DatabaseInvoice.getInvoice(invoice.getId());
+        if (invoice == null) {
+            return false;
         }
-        return temp;
+        DatabaseInvoice.removeInvoice(invoice.getId());
+        return true;
     }
 
 }
