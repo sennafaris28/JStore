@@ -24,6 +24,7 @@ public class DatabaseItem {
             if ((item.getName() != itemDB.getName()) && (item.getStatus() != itemDB.getStatus())
                     && (item.getSupplier() != itemDB.getSupplier())) {
                 ITEM_DATABASE.add(item);
+                LAST_ITEM_ID = item.getId();
                 temp = true;
             } else {
                 temp = false;
@@ -43,30 +44,38 @@ public class DatabaseItem {
     }
 
     public static ArrayList<Item> getItemFromSupplier(Supplier supplier) {
-        ArrayList<Item> temp = null;
+        ArrayList<Item> temp = new ArrayList<>();
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getSupplier() == supplier) {
                 temp.add(itemDB);
+            } else {
+                temp = null;
             }
         }
         return temp;
     }
 
     public static ArrayList<Item> getItemFromCategory(ItemCategory category) {
-        ArrayList<Item> temp = null;
+        ArrayList<Item> temp = new ArrayList<>();
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getCategory() == category) {
                 temp.add(itemDB);
             }
         }
-        return temp;
+        if (temp.size() > 0) {
+            return temp;
+        } else {
+            return null;
+        }
     }
 
     public static ArrayList<Item> getItemFromStatus(ItemStatus status) {
-        ArrayList<Item> temp = null;
+        ArrayList<Item> temp = new ArrayList<>();
         for (Item itemDB : ITEM_DATABASE) {
             if (itemDB.getStatus() == status) {
                 temp.add(itemDB);
+            } else {
+                temp = null;
             }
         }
         return temp;
