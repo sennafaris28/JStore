@@ -3,13 +3,8 @@ public class ItemNotFoundException extends  Exception {
     private int item_error;
 
     public ItemNotFoundException(int item_input) {
-        super();
+        super("Item ID : ");
         this.item_error = item_input;
-    }
-
-    @Override
-    public String getMessage() {
-        return "Item ID : ";
     }
 
     public String getExMessage() {

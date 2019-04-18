@@ -3,13 +3,8 @@ public class ItemAlreadyExistsException extends Exception {
     private Item item_error;
 
     public ItemAlreadyExistsException(Item item_input) {
-        super();
+        super("Item Name : ");
         this.item_error = item_input;
-    }
-
-    @Override
-    public String getMessage() {
-        return "Item Name : ";
     }
 
     public String getExMessage() {

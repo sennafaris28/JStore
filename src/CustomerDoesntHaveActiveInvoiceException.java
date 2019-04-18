@@ -3,13 +3,8 @@ public class CustomerDoesntHaveActiveInvoiceException extends Exception {
     private Customer customer_error;
 
     public CustomerDoesntHaveActiveInvoiceException(Customer customer_input) {
-        super();
+        super("Customer : ");
         this.customer_error = customer_input;
-    }
-
-    @Override
-    public String getMessage() {
-        return "Customer : ";
     }
 
     public String getExMessage() {
