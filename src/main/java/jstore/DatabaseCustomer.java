@@ -3,7 +3,6 @@ package jstore;
 import java.util.*;
 
 public class DatabaseCustomer {
-    // instance variables - replace the example below with your own
     private static ArrayList<Customer> CUSTOMER_DATABASE = new ArrayList<Customer>();
     private static int LAST_CUSTOMER_ID = 0;
 
@@ -43,6 +42,15 @@ public class DatabaseCustomer {
             }
         }
         throw new CustomerNotFoundException(id);
+    }
+
+    public static Customer getCustomerLogin(String email, String password) {
+        for (Customer customerDB : CUSTOMER_DATABASE) {
+            if ((customerDB.getEmail() == email) && (customerDB.getPassword() == password)) {
+                return customerDB;
+            }
+        }
+        return null;
     }
 
 }

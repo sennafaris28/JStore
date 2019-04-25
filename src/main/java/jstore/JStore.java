@@ -14,24 +14,25 @@ public class JStore {
         // item_list.add(1);
         // item_list.add(2);
 
-        // Location location1 = new Location("Papua", "Pedagang Sagu", "Jayapura");
+         Location location1 = new Location("Papua", "Pedagang Sagu", "Jayapura");
 
-        // try {
-        //     DatabaseSupplier.addSupplier(new Supplier("Udin", "udin@carikuli.com", "99999", location1));
-        //     DatabaseSupplier.addSupplier(new Supplier("Udin", "udin@carikuli.com", "99999", location1));
-        //     DatabaseSupplier.addSupplier(new Supplier("Marudin", "marudin@carikuli.com", "88888", location1));
+         try {
+             DatabaseSupplier.addSupplier(new Supplier("Udin", "udin@carikuli.com", "99999", location1));
+             DatabaseSupplier.addSupplier(new Supplier("Akmal", "akmal@carikuli.com", "77777", location1));
+             DatabaseSupplier.addSupplier(new Supplier("Marudin", "marudin@carikuli.com", "88888", location1));
 
-        // } catch (SupplierAlreadyExistsException x)  {
-        //     System.out.println(x.getExMessage());
-        // }
+         } catch (SupplierAlreadyExistsException x)  {
+             System.out.println(x.getExMessage());
+         }
 
-        // try {
-        //     DatabaseItem.addItem(new Item("Sabun", ItemStatus.New, 10000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
-        //     DatabaseItem.addItem(new Item("Sabun", ItemStatus.New, 10000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
-        //     DatabaseItem.addItem(new Item("Odol", ItemStatus.New, 14000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
-        // } catch (ItemAlreadyExistsException x) {
-        //     System.out.println(x.getExMessage());
-        // }
+         try {
+             DatabaseItem.addItem(new Item("Sabun", ItemStatus.New, 10000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
+             DatabaseItem.addItem(new Item("Busa", ItemStatus.New, 12000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
+             DatabaseItem.addItem(new Item("Odol", ItemStatus.New, 14000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
+             DatabaseItem.addItem(new Item("Sampo", ItemStatus.New, 16000, ItemCategory.Electronics, DatabaseSupplier.getSupplier(1)));
+         } catch (ItemAlreadyExistsException x) {
+             System.out.println(x.getExMessage());
+         }
 
         // try {
         //     DatabaseCustomer.addCustomer(new Customer("Hasnan", "hasnan@ui.ac.id", "CikguBopung", "kiki6398", 1998, 3, 6));
